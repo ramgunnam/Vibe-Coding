@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tracks data quality processing jobs using Apex Cursors</description>
+    <label>Data Quality Job</label>
+    <nameField>
+        <displayFormat>DQJ-{0000}</displayFormat>
+        <label>Job Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Data Quality Jobs</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlatformEvent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Platform event for real-time data quality job progress monitoring</description>
+    <label>Data Quality Progress</label>
+    <pluralLabel>Data Quality Progress Events</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+    <fields>
+        <fullName>Job_Id__c</fullName>
+        <label>Job Id</label>
+        <length>50</length>
+        <isRequired>true</isRequired>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <length>50</length>
+        <isRequired>false</isRequired>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Accounts_Processed__c</fullName>
+        <label>Accounts Processed</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Contacts_Processed__c</fullName>
+        <label>Contacts Processed</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Opportunities_Processed__c</fullName>
+        <label>Opportunities Processed</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Cases_Processed__c</fullName>
+        <label>Cases Processed</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Total_Accounts__c</fullName>
+        <label>Total Accounts</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Total_Contacts__c</fullName>
+        <label>Total Contacts</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Total_Opportunities__c</fullName>
+        <label>Total Opportunities</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cases__c</fullName>
+        <label>Total Cases</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Issues_Found__c</fullName>
+        <label>Issues Found</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Duplicates_Found__c</fullName>
+        <label>Duplicates Found</label>
+        <isRequired>false</isRequired>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Average_Quality_Score__c</fullName>
+        <label>Average Quality Score</label>
+        <isRequired>false</isRequired>
+        <precision>5</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Error_Message__c</fullName>
+        <label>Error Message</label>
+        <length>1000</length>
+        <isRequired>false</isRequired>
+        <type>Text</type>
+    </fields>
+</PlatformEvent>

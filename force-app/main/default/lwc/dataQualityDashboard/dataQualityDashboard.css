@@ -1,0 +1,91 @@
+/* Data Quality Dashboard Styles */
+
+.stat-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background: #f3f3f3;
+    border-left: 4px solid;
+}
+
+.stat-card.critical {
+    border-color: #c23934;
+    background: #fef1f1;
+}
+
+.stat-card.high {
+    border-color: #ff9a3c;
+    background: #fff8f0;
+}
+
+.stat-card.warning {
+    border-color: #ffb75d;
+    background: #fffbf5;
+}
+
+.stat-card.success {
+    border-color: #04844b;
+    background: #f0fff5;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #181818;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #706e6b;
+    margin-top: 0.25rem;
+}
+
+.progress-section {
+    padding: 0.75rem;
+    background: #fafaf9;
+    border-radius: 0.25rem;
+}
+
+.progress-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: #706e6b;
+    margin-bottom: 0.25rem;
+}
+
+.metric-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #fafaf9;
+    border-radius: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0070d2;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: #706e6b;
+    margin-top: 0.25rem;
+}
+
+/* Severity colors in datatable */
+.slds-text-color_error {
+    color: #c23934 !important;
+    font-weight: 600;
+}
+
+.slds-text-color_weak {
+    color: #ff9a3c !important;
+}
