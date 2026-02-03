@@ -3,6 +3,5 @@
     <fullName>Error_Message__c</fullName>
     <label>Error Message</label>
     <length>1000</length>
-    <isRequired>false</isRequired>
     <type>Text</type>
 </CustomField>

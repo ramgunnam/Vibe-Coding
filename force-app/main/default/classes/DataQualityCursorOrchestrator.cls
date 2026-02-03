@@ -716,7 +716,7 @@ public with sharing class DataQualityCursorOrchestrator implements Queueable, Da
             jobState.potentialDuplicates = (Integer)job.Duplicates_Found__c;
             jobState.averageQualityScore = job.Average_Quality_Score__c;
             jobState.executionCount = (Integer)job.Execution_Count__c;
-            this.processingMode = ProcessingMode.valueOf(job.Processing_Mode__c);
+            this.processingMode = getProcessingModeFromString(job.Processing_Mode__c);
             this.currentBatchSize = (Integer)job.Batch_Size__c;
         }
     }
@@ -827,6 +827,35 @@ public with sharing class DataQualityCursorOrchestrator implements Queueable, Da
     private String generateJobId() {
         return 'DQ-' + String.valueOf(System.now().getTime()) + '-' +
                String.valueOf(Math.abs(Crypto.getRandomInteger())).substring(0, 6);
+    }
+
+    /**
+     * @description Convert string to ProcessingMode enum safely
+     */
+    private static ProcessingMode getProcessingModeFromString(String modeString) {
+        if (String.isBlank(modeString)) {
+            return ProcessingMode.FULL_SCAN;
+        }
+        switch on modeString {
+            when 'FULL_SCAN' {
+                return ProcessingMode.FULL_SCAN;
+            }
+            when 'INCREMENTAL' {
+                return ProcessingMode.INCREMENTAL;
+            }
+            when 'HIGH_PRIORITY_FIRST' {
+                return ProcessingMode.HIGH_PRIORITY_FIRST;
+            }
+            when 'COMPLIANCE_AUDIT' {
+                return ProcessingMode.COMPLIANCE_AUDIT;
+            }
+            when 'DUPLICATE_DETECTION' {
+                return ProcessingMode.DUPLICATE_DETECTION;
+            }
+            when else {
+                return ProcessingMode.FULL_SCAN;
+            }
+        }
     }
 
     // ============================================

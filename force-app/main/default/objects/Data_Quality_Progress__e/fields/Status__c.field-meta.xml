@@ -3,6 +3,5 @@
     <fullName>Status__c</fullName>
     <label>Status</label>
     <length>50</length>
-    <isRequired>false</isRequired>
     <type>Text</type>
 </CustomField>
