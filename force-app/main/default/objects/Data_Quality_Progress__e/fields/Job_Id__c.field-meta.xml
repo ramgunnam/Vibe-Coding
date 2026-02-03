@@ -3,6 +3,5 @@
     <fullName>Job_Id__c</fullName>
     <label>Job Id</label>
     <length>50</length>
-    <isRequired>true</isRequired>
     <type>Text</type>
 </CustomField>
