@@ -175,8 +175,76 @@ System.enqueueJob(resumedOrchestrator);
 
 ## Deployment
 
+### Prerequisites
+
+1. **Salesforce CLI (sf)**: Install from [Salesforce Developer Tools](https://developer.salesforce.com/tools/salesforcecli)
+2. **Git**: For version control and pulling latest changes
+3. **Salesforce Sandbox Access**: Credentials for the DODD sandbox
+
+### Quick Start
+
 ```bash
-sf project deploy start --source-dir force-app
+# 1. Clone the repository
+git clone https://github.com/ramgunnam/Vibe-Coding.git
+cd Vibe-Coding
+
+# 2. Authenticate to your sandbox
+./scripts/authenticate-sandbox.sh dodd-sandbox
+
+# 3. Validate deployment (dry-run)
+./scripts/validate-deployment.sh
+
+# 4. Deploy to sandbox
+./scripts/deploy-to-sandbox.sh
+```
+
+### Deployment Scripts
+
+| Script | Description |
+|--------|-------------|
+| `scripts/deploy-to-sandbox.sh` | Full interactive deployment with validation |
+| `scripts/validate-deployment.sh` | Validation only (dry-run mode) |
+| `scripts/quick-deploy.sh` | Non-interactive deploy for CI/CD |
+| `scripts/authenticate-sandbox.sh` | Authenticate to sandbox |
+
+### Script Options
+
+```bash
+# Deploy with interactive prompts (recommended)
+./scripts/deploy-to-sandbox.sh
+
+# Deploy to a different sandbox
+./scripts/deploy-to-sandbox.sh --alias my-sandbox
+
+# Validate only (no actual deployment)
+./scripts/deploy-to-sandbox.sh --validate
+
+# Skip tests (use carefully)
+./scripts/deploy-to-sandbox.sh --skip-tests
+
+# Show all options
+./scripts/deploy-to-sandbox.sh --help
+```
+
+### Environment Configuration
+
+Copy `.env.example` to `.env` and customize:
+
+```bash
+cp .env.example .env
+# Edit .env with your settings
+source .env
+./scripts/deploy-to-sandbox.sh
+```
+
+### Manual Deployment
+
+```bash
+# Simple deployment
+sf project deploy start --source-dir force-app --target-org dodd-sandbox
+
+# With tests
+sf project deploy start --source-dir force-app --target-org dodd-sandbox --test-level RunLocalTests
 ```
 
 ## Resources

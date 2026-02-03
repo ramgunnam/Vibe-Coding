@@ -1,0 +1,46 @@
+# Salesforce DX Project Gitignore
+
+# Environment files (contain sensitive credentials)
+.env
+.env.local
+.env.*.local
+
+# Salesforce local development files
+.sfdx/
+.sf/
+
+# Salesforce DX logs
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Node modules (if using LWC local development)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+coverage/
+
+# Local test database
+*.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Package deployment files
+.forceignore.bak
