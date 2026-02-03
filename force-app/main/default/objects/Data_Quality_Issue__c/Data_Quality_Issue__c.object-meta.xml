@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores data quality issues detected by cursor-based processing</description>
+    <label>Data Quality Issue</label>
+    <nameField>
+        <displayFormat>DQI-{0000}</displayFormat>
+        <label>Issue Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Data Quality Issues</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
